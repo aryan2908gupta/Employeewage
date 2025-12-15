@@ -4,25 +4,25 @@
     {
         static void Main(string[] args)
         {
-            //Constants
-            int IS_FULL_TIME = 1;
-            int EMP_RATE_PER_HOUR = 20;
-            //Variables
-            int empHrs = 0;
-            int empwage = 0;
             Random random = new Random();
-            //Computation
-            int empCheck = random.Next(0, 2);
-            if (empCheck == IS_FULL_TIME)
+            int empAttendence = random.Next(0, 3);
+            int empHours = 0;
+            int empWages = 0;
+            int emp_per_hours = 20;
+            if (empAttendence == 1)
             {
-                empHrs = 8;
+                empHours = 8;
+            }
+            else if (empAttendence == 2)
+            {
+                empHours = 4;
             }
             else
             {
-                empHrs = 0;
+                empHours = 0;
             }
-            empwage = empHrs * EMP_RATE_PER_HOUR;
-            Console.WriteLine("Emp Wage :" + empwage);
+            empWages = empHours * emp_per_hours;
+            Console.WriteLine($"Employee Wages: {empWages}");
         }
     }
 }
